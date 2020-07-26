@@ -1,0 +1,27 @@
+
+mybatis:
+  #注册映射文件
+  mapper-locations: classpath:com/bos/source/mapper/*.xml
+  #注册实体类别名
+  type-aliases-package: com.bos.source.model
+  configuration:
+    #    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///vhr?useUnicode=true&characterEncoding=UTF-8   #jdbc:mysql:///test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+server:
+  port: 8888
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com:
+      bos:
+        source:
+          mapper: debug
+

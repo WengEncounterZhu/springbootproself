@@ -1,0 +1,23 @@
+2020-07-24 21:38:50.234 [main] INFO  com.bos.source.HellodemoApplication - Starting HellodemoApplication on DESKTOP-87J7PPL with PID 37668 (D:\000ideapro\javaboyzijicode\springbootproself\exercise\target\classes started by source in D:\000ideapro\javaboyzijicode\springbootproself)
+2020-07-24 21:38:50.237 [main] INFO  com.bos.source.HellodemoApplication - No active profile set, falling back to default profiles: default
+2020-07-24 21:38:52.198 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2020-07-24 21:38:52.208 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2020-07-24 21:38:52.208 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-24 21:38:52.209 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-24 21:38:52.320 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-24 21:38:52.320 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2025 ms
+2020-07-24 21:38:53.674 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-07-24 21:38:53.735 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-24 21:38:53.830 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-24 21:38:54.121 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@377949f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@5927f904, org.springframework.security.web.header.HeaderWriterFilter@7c96c85, org.springframework.security.web.csrf.CsrfFilter@7015ebef, org.springframework.security.web.authentication.logout.LogoutFilter@b5b9333, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3fdcde7a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@37c5284a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@9df564f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6b63abdc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@413d2cd1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e98b788, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a21f43f, org.springframework.security.web.session.SessionManagementFilter@7243145f, org.springframework.security.web.access.ExceptionTranslationFilter@19dc0d32, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3daf03d8]
+2020-07-24 21:38:54.162 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2020-07-24 21:38:54.180 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2020-07-24 21:38:54.181 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-24 21:38:54.212 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-24 21:38:54.271 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-24 21:38:54.418 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2020-07-24 21:38:54.472 [main] INFO  com.bos.source.HellodemoApplication - Started HellodemoApplication in 4.938 seconds (JVM running for 7.128)
+2020-07-24 21:38:54.843 [RMI TCP Connection(1)-192.168.1.4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 21:38:54.844 [RMI TCP Connection(1)-192.168.1.4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-07-24 21:38:54.855 [RMI TCP Connection(1)-192.168.1.4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-07-24 21:38:55.414 [RMI TCP Connection(3)-192.168.1.4] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited

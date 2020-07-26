@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="thymeleaf" />
+        <module name="jspspringboot" />
+        <module name="mybatis-mutidatasource" />
+        <module name="actuator-admin" />
+        <module name="freemarker" />
+        <module name="actuator-client" />
+        <module name="exercise" />
+        <module name="excercise" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="excercise" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="actuator-admin" options="-parameters" />
+      <module name="actuator-client" options="-parameters" />
+      <module name="exercise" options="-parameters" />
+      <module name="mybatis-mutidatasource" options="-parameters" />
+    </option>
+  </component>
+</project>

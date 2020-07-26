@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.source.mybatis.mapper2.StudentMapperTwo" >
+  <resultMap id="BaseResultMap" type="com.source.mybatis.model.Student" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+
+
+    <select id="selecttwo" resultType="com.source.mybatis.model.Student">
+        select  *from student
+    </select>
+</mapper>
