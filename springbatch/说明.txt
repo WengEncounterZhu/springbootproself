@@ -1,0 +1,106 @@
+DefaultLineMapper实现了简单的文本处理功能，直接将切分的工作交给了wxMultiTokenizer处理文本的工作交给了WxFileSetMapper。
+这两个分别由两个bean实现注入,spring类DefaultLineMapper的代码如下：
+spring.batch.initialize-schema=always表示让spring batch在数据库里面创建默认的数据表
+
+
+2020-08-12 09:33:30.628  INFO 40736 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-12 09:33:30.685  INFO 40736 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-08-12 09:33:30.856  INFO 40736 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2020-08-12 09:33:30.857  INFO 40736 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-08-12 09:33:30.967  INFO 40736 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-08-12 09:33:31.106  INFO 40736 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-12 09:33:31.884  INFO 40736 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+写数据。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
+2020-08-12 09:33:32.052  INFO 40736 --- [           main] c.t.batch.TracePerformanceAspect         : 类名为:  BatchConfiguration------方法名为：  writer------Execution time :  6 ms
+每次度10条提交
+2020-08-12 09:33:32.061  INFO 40736 --- [           main] c.t.batch.TracePerformanceAspect         : 类名为:  BatchConfiguration------方法名为：  lineMapper------Execution time :  1 ms
+2020-08-12 09:33:32.064  INFO 40736 --- [           main] c.t.batch.TracePerformanceAspect         : 类名为:  BatchConfiguration------方法名为：  reader------Execution time :  7 ms
+2020-08-12 09:33:32.069  INFO 40736 --- [           main] c.t.batch.TracePerformanceAspect         : 类名为:  BatchConfiguration------方法名为：  processor------Execution time :  0 ms
+2020-08-12 09:33:32.092  INFO 40736 --- [           main] c.t.batch.TracePerformanceAspect         : 类名为:  BatchConfiguration------方法名为：  step1------Execution time :  37 ms
+2020-08-12 09:33:32.106  INFO 40736 --- [           main] c.t.batch.TracePerformanceAspect         : 类名为:  BatchConfiguration------方法名为：  importBankJob------Execution time :  10 ms
+2020-08-12 09:33:32.600  INFO 40736 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-12 09:33:32.634  WARN 40736 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-12 09:33:32.710  WARN 40736 --- [           main] o.s.b.a.batch.JpaBatchConfigurer         : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2020-08-12 09:33:32.712  INFO 40736 --- [           main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-12 09:33:32.725  INFO 40736 --- [           main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-12 09:33:32.798  INFO 40736 --- [           main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2020-08-12 09:33:32.809  INFO 40736 --- [           main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-08-12 09:33:32.809  INFO 40736 --- [           main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.0 created.
+2020-08-12 09:33:32.810  INFO 40736 --- [           main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2020-08-12 09:33:32.811  INFO 40736 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-08-12 09:33:32.811  INFO 40736 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2020-08-12 09:33:32.811  INFO 40736 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.0
+2020-08-12 09:33:32.811  INFO 40736 --- [           main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@54567b05
+2020-08-12 09:33:32.853  INFO 40736 --- [           main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2020-08-12 09:33:32.854  INFO 40736 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2020-08-12 09:33:32.881  INFO 40736 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2020-08-12 09:33:32.882  INFO 40736 --- [           main] com.techshard.batch.Application          : Started Application in 4.54 seconds (JVM running for 5.409)
+2020-08-12 09:34:11.760  INFO 40736 --- [nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-12 09:34:11.760  INFO 40736 --- [nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-12 09:34:11.769  INFO 40736 --- [nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-08-12 09:34:11.878  INFO 40736 --- [nio-9999-exec-1] o.s.b.c.l.support.SimpleJobLauncher      : Job: [FlowJob: [name=importBankJob]] launched with the following parameters: [{time=1597196051791}]
+2020-08-12 09:34:11.913  INFO 40736 --- [nio-9999-exec-1] o.s.batch.core.job.SimpleStepHandler     : Executing step: [step1]
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  2 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.955  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.956  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.975  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.976  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.987  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.988  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.988  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.988  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:11.988  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  BankProcessor------方法名为：  process------Execution time :  0 ms
+2020-08-12 09:34:12.007  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : !!! JOB FINISHED!  to verify the results
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='BOSC', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='BOSC3', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='BOSC', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.016  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.017  INFO 40736 --- [nio-9999-exec-1] c.t.b.c.NotificationListener             : Found <Bank{id=0, bankName='上海银行', location='锦绣东路4516'}> in the table bank.
+2020-08-12 09:34:12.017  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  NotificationListener------方法名为：  afterJob------Execution time :  10 ms
+2020-08-12 09:34:12.021  INFO 40736 --- [nio-9999-exec-1] o.s.b.c.l.support.SimpleJobLauncher      : Job: [FlowJob: [name=importBankJob]] completed with the following parameters: [{time=1597196051791}] and the following status: [COMPLETED]
+2020-08-12 09:34:12.021  INFO 40736 --- [nio-9999-exec-1] c.t.batch.TracePerformanceAspect         : 类名为:  JobInvokerController------方法名为：  handle------Execution time :  232 ms
+

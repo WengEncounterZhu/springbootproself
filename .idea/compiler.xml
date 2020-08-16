@@ -6,18 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="thymeleaf" />
         <module name="jspspringboot" />
         <module name="mybatis-mutidatasource" />
+        <module name="springbatch" />
+        <module name="lianxi" />
+        <module name="redis" />
+        <module name="spring-annotation-leifengyang" />
+        <module name="actuator-client" />
+        <module name="thymeleaf" />
+        <module name="excercise" />
+        <module name="provider" />
+        <module name="multithreads" />
+        <module name="jsp" />
         <module name="actuator-admin" />
         <module name="freemarker" />
-        <module name="actuator-client" />
+        <module name="jsp2" />
+        <module name="consumer" />
         <module name="exercise" />
-        <module name="excercise" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="excercise" target="1.5" />
+      <module name="jsp2" target="1.8" />
+      <module name="redis" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +37,8 @@
       <module name="actuator-client" options="-parameters" />
       <module name="exercise" options="-parameters" />
       <module name="mybatis-mutidatasource" options="-parameters" />
+      <module name="spring-annotation-leifengyang" options="-parameters" />
+      <module name="springbatch" options="-parameters" />
     </option>
   </component>
 </project>

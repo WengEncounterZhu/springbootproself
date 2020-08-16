@@ -17,6 +17,8 @@
 
     <modules>
         <module>exercise</module>
+        <module>spring-annotation-leifengyang</module>
+        <module>springbatch</module>
     </modules>
 
 

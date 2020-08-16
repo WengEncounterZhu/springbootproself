@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/actuator-admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/actuator-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/exercise/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/freemarker/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/freemarker/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jspspringboot/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jspspringboot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lianxi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lianxi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multithreads/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/multithreads/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-mutidatasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation-leifengyang/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation-leifengyang/src/main/java/com/atguigu/aop/LogAspects.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation-leifengyang/src/main/java/com/atguigu/bean/MyBeanPostProcessor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation-leifengyang/src/main/java/com/atguigu/bean/Person.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation-leifengyang/src/main/java/com/atguigu/condition/LinuxCondition.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation-leifengyang/src/main/java/com/atguigu/config/MainConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-annotation-leifengyang/src/main/java/com/atguigu/config/MainConfig2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbatch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/thymeleaf/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/thymeleaf/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
