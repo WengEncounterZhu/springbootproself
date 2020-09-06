@@ -5,9 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-<#noparse>
+<#--<#noparse>
     <#include './header.ftl'>
-</#noparse>
+</#noparse>-->
+<#include './header.ftl'>
 ${hello?html}
 <#include './header.ftl'>
 <#escape x as x?html>

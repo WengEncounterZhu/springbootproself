@@ -1,9 +1,6 @@
 package com.source.freemarker;
 
-/**
- * @Author 江南一点雨
- * @Site www.javaboy.org 2019-07-20 6:59
- */
+
 public class User {
     private Long id;
     private String username;

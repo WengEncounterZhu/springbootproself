@@ -19,16 +19,17 @@
         <module>exercise</module>
         <module>spring-annotation-leifengyang</module>
         <module>springbatch</module>
+        <module>promise</module>
     </modules>
 
 
     <dependencies>
 
         <!--  安全管理依赖-->
-        <dependency>
+      <!--  <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--actuator 监控依赖-->
         <dependency>

@@ -9,6 +9,7 @@
         <module name="jspspringboot" />
         <module name="mybatis-mutidatasource" />
         <module name="springbatch" />
+        <module name="jwt-security" />
         <module name="lianxi" />
         <module name="redis" />
         <module name="spring-annotation-leifengyang" />
@@ -19,6 +20,8 @@
         <module name="multithreads" />
         <module name="jsp" />
         <module name="actuator-admin" />
+        <module name="promise" />
+        <module name="redisdemo" />
         <module name="freemarker" />
         <module name="jsp2" />
         <module name="consumer" />
@@ -36,6 +39,7 @@
       <module name="actuator-admin" options="-parameters" />
       <module name="actuator-client" options="-parameters" />
       <module name="exercise" options="-parameters" />
+      <module name="jsp" options="-parameters" />
       <module name="mybatis-mutidatasource" options="-parameters" />
       <module name="spring-annotation-leifengyang" options="-parameters" />
       <module name="springbatch" options="-parameters" />

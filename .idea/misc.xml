@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/exercise" />
     <file type="web" url="file://$PROJECT_DIR$/jsp2" />
+    <file type="web" url="file://$PROJECT_DIR$/promise" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -16,11 +17,14 @@
         <option value="$PROJECT_DIR$/freemarker/pom.xml" />
         <option value="$PROJECT_DIR$/thymeleaf/pom.xml" />
         <option value="$PROJECT_DIR$/jspspringboot/pom.xml" />
-        <option value="$PROJECT_DIR$/jsp/pom.xml" />
         <option value="$PROJECT_DIR$/provider/pom.xml" />
         <option value="$PROJECT_DIR$/consumer/pom.xml" />
         <option value="$PROJECT_DIR$/multithreads/pom.xml" />
         <option value="$PROJECT_DIR$/lianxi/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
+        <option value="$PROJECT_DIR$/jwt-security/pom.xml" />
+        <option value="$PROJECT_DIR$/redisdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/jsp/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
